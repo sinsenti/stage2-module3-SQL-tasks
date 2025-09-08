@@ -9,22 +9,22 @@ select
   *
 from
   student
-where
+WHERE
   birthday < dateadd ('YEAR', -20, current_date);
 
-select
+SELECT
   *
-from
+FROM
   student
 where
   groupnumber = 10
   and birthday > dateadd ('YEAR', -20, current_date);
 
-select
-  *
-from
+SELECT
+  name
+FROM
   student
-where
+WHERE
   name = "Mike"
   or groupnumber in (4, 5, 6);
 
