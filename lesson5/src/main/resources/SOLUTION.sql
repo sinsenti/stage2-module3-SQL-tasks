@@ -10,4 +10,4 @@ select * from payment where payment_date > dateadd ('MONTH', -8, current_date);
 
 SELECT * FROM student WHERE name LIKE 'A%';
 
-SELECT * FROM student WHERE ( name = 'Roxi' and groupnumber = 4) OR ( name = 'Taillie' and groupnumber = 9);
+SELECT * FROM student WHERE ( name LIKE 'Roxi%' and groupnumber = 4) OR ( name LIKE 'Taillie%' and groupnumber = 9);
