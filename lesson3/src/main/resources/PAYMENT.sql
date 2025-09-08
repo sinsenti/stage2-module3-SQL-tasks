@@ -1,18 +1,3 @@
-alter table payment add constraint
-alter column type_id
-set
-  not null;
-
-alter table payment add constraint
-alter column payment_date
-set
-  not null;
-
-alter table payment add constraint
-alter column student_id
-set
-  not null;
-
 insert into
   payment (type_id, amount, payment_date, student_id)
 values

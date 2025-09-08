@@ -1,15 +1,3 @@
-alter table Mark add constraint chek_mark check (mark between 1 and 10);
-
-alter table Mark
-alter column student_id
-set
-  not null;
-
-alter table Mark
-alter column subject_id
-set
-  not null;
-
 insert into
   mark (student_id, subject_id, mark)
 values

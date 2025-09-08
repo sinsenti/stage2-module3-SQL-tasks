@@ -1,4 +1,3 @@
-alter table paymenttype add constraint unique_name unique (name);
 
 insert into
   paymenttype (name)

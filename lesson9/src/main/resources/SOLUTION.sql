@@ -1,21 +1,20 @@
-select * from student as s
-  join mark as m on m.student_id = s.id
-group by s.id having avg(mark) > 8;
+SELECT s.id, s.name
+FROM student s
+JOIN mark m ON s.id = m.student_id
+GROUP BY s.id, s.name
+HAVING AVG(m.mark) > 8;
 
-select id, name from student as s
-  join mark as m on m.student_id = s.id
-group by
-  s.id,
-  s.name
-having
-  min(m.mark) > 7;
 
-select distinct id, name from student as s
-  join payment as p on p.student_id = s.id
-where
-  YEAR (p.payment_date) = 2019
-group by
-  s.id,
-  s.name
-having
-  count(p.id) > 2;
+SELECT s.id, s.name
+FROM student s
+JOIN mark m ON s.id = m.student_id
+GROUP BY s.id, s.name
+HAVING MIN(m.mark) > 7;
+
+SELECT s.id, s.name
+FROM student s
+JOIN payment p ON s.id = p.student_id
+WHERE p.payment_date BETWEEN '2019-01-01' AND '2019-12-31'
+GROUP BY s.id, s.name
+HAVING COUNT(p.id) > 2;
+

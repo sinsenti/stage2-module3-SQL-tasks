@@ -1,4 +1,3 @@
-alter table subject add constraint check_grade check (grade between 1 and 5);
 
 insert into
   subject (name, description, grade)

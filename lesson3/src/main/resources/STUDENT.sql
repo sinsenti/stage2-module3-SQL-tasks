@@ -1,8 +1,3 @@
-ALTER TABLE Student
-ALTER COLUMN birthday
-SET
-  NOT NULL;
-
 insert into
   student (name, birthday, groupnumber)
 values
