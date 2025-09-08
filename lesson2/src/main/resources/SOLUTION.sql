@@ -26,13 +26,12 @@ VALUES
   ('math', '', 3),
   ('Science', '', 4),
   ('IT', '', 4),
-  ('Math2', 'math 2', 5),
-  ('Math3', 'math 3', 5);
+  ('First', 'math 2', 5),
+  ('Second', 'math 3', 5);
 
-insert into paymenttype (id, name) values (1, 'DAILY');
-insert into paymenttype (id, name) values (3, 'YEAR');
-insert into paymenttype (id, name) values (2, 'WEEKLY');
-insert into paymenttype (id, name) values (4, 'MONTHLY');
+INSERT INTO PaymentType (id, name) VALUES (1, 'DAILY');
+INSERT INTO PaymentType (id, name) VALUES (2, 'WEEKLY');
+INSERT INTO PaymentType (id, name) VALUES (3, 'MONTHLY');
 
 INSERT INTO
   payment (type_id, amount, student_id, payment_date)
