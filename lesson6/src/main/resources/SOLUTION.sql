@@ -1,33 +1,21 @@
-select
-  p.*
-from
-  payment as p
-  join paymenttype as pt on p.type_id = pt.id
-where
+SELECT p.* FROM payment as p
+  JOIN paymenttype as pt ON p.type_id = pt.id
+WHERE
   pt.name = 'MONTHLY';
 
-select
-  m.*
-from
-  mark m
-  join subject s on s.id = m.subject_id
-where
-  s.name = "Art";
+SELECT m.* FROM mark m
+  JOIN subject s ON s.id = m.subject_id
+WHERE
+  s.name = 'Art';
 
-select distinct
-  s.*
-from
-  student s
-  join payment p on p.student_id = s.id
-  join paymenttype pt on pt.id = p.type_id
-where
-  pt.name = "WEEKLY";
+SELECT DISTINCT s.* FROM student s
+  JOIN payment p ON p.student_id = s.id
+  JOIN paymenttype pt ON pt.id = p.type_id
+WHERE
+  pt.name = 'WEEKLY';
 
-select distinct
-  s.*
-from
-  student s
-  join mark m on s.id = m.student_id
-  join subject sub on m.subject_id = sub.id
-where
-  sub.name = "Math";
+SELECT DISTINCT s.* FROM student s
+  JOIN mark m ON s.id = m.student_id
+  JOIN subject sub ON m.subject_id = sub.id
+WHERE
+  sub.name = 'Math';
