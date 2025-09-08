@@ -29,12 +29,25 @@ VALUES
   ('Math2', 'math 2', 5),
   ('Math3', 'math 3', 5);
 
-INSERT INTO
-  paymenttype (name)
-VALUES
-  ('DAILY'),
-  ('WEEKLY'),
-  ('MONTHLY');
+insert into
+  paymenttype (id, name)
+values
+  (1, 'DAILY');
+
+insert into
+  paymenttype (id, name)
+values
+  (3, 'YEAR');
+
+insert into
+  paymenttype (id, name)
+values
+  (2, 'WEEKLY');
+
+insert into
+  paymenttype (id, name)
+values
+  (4, 'MONTHLY');
 
 INSERT INTO
   payment (type_id, amount, student_id, payment_date)
