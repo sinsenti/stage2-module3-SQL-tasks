@@ -27,7 +27,7 @@ from
   student as s
   join payment as p on p.student_id = s.id
 where
-  year (p.payment_date) = 2019
+  YEAR (p.payment_date) = 2019
 group by
   s.id,
   s.name

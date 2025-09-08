@@ -10,15 +10,15 @@ select
 from
   student
 where
-  birthday < dateadd ('year', -20, current_date);
+  birthday < dateadd ('YEAR', -20, current_date);
 
 select
   *
 from
   student
 where
-  group = 10
-  and birthday > dateadd ('year', -20, current_date);
+  groupnumber = 10
+  and birthday > dateadd ('YEAR', -20, current_date);
 
 select
   *
@@ -26,7 +26,7 @@ from
   student
 where
   name = "Mike"
-  or group in (4, 5, 6);
+  or groupnumber in (4, 5, 6);
 
 select
   *
